@@ -2,7 +2,7 @@
 <section id="content">
   <div id="content-wrap" class="container row pt-3">
     <div id="main" class="col-md-9">
-      <h1>投稿一覧</h1>
+      <h1>「<?php the_search_query(); ?>」の検索結果</h1>
       <hr>
       <?php
       if (have_posts()) :

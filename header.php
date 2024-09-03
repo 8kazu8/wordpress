@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/mystyle.css" />
-  <?php wp_enqueue_script('jquery'); ?>
-  <?php wp_enqueue_script('bootstrap-js','https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js',array('jquery')); ?>
-  <?php wp_head(); ?>
+    <?php wp_enqueue_script('jquery'); ?>
+    <?php wp_enqueue_script('bootstrap-js','https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js',array('jquery')); ?>
+    <?php wp_head(); ?>
   </head>
   <body>
     <header class="bg-secondary-subtle">
@@ -33,6 +33,10 @@
                 <a class="nav-link" href="#">CONTACT</a>
               </li>
             </ul>
+            <form class="d-flex" role="search" method="get" action="<?php echo esc_url( home_url() ); ?>" name="s">
+            <input class="form-control me-2" type="search" name="s" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
           </div>
         </div>
       </nav>
